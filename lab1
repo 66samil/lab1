@@ -1,0 +1,10 @@
+import math
+
+k = (0.273 * math.log(3))**(1.573 * math.log(5))
+p = math.atan(math.sin(1) * math.log(math.sqrt(math.log(3))))\
+if k > abs(p):
+  l = (7 * k - 5 * p) / (2 * k**2 + 3 * p**2)
+else:
+  l=abs(k - p)
+
+print(l)
