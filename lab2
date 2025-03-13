@@ -1,0 +1,14 @@
+def calculate_y(a,b)
+  condition = b**2 - a
+  if condition == 1,5:
+      y=3*b+1,6*a
+  elif condition < 1,5:
+      y=8*a-1,7*b
+  else:
+      y=4*b+7*a
+  return y
+
+a=float(input())
+b=float(input())
+y_result=calculate_y(a,b)
+print(y_result)
