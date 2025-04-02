@@ -1,0 +1,8 @@
+import math
+
+y, n = 3, 2
+while n < 10:
+    y += (n + 2) / math.factorial(n)
+    n += 1
+
+print(y)
