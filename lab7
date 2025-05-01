@@ -1,0 +1,20 @@
+massiv = [3, 8, 12, 15, 20, 25, 30, 35, 40, 42]
+with open('massiv.txt', 'w') as file:
+    for number in massiv:
+        file.write(f"{number}\n")
+cüt_ədədlər = []
+cəm = 0
+
+with open('massiv.txt', 'r') as file:
+    lines = file.readlines()
+    for line in lines:
+        number = int(line.strip())  # Fayldan oxunmuş hər bir elementi tam ədədə çeviririk
+        if number % 2 == 0:  # Cüt ədəd olub-olmadığını yoxlayırıq
+            cüt_ədədlər.append(number)
+            cəm += number
+
+with open('cut_ededler.txt', 'w') as file:
+    for num in cüt_ədədlər:
+        file.write(f"{num}\n")
+    file.write(f"Cüt ədədlərin cəmi: {cəm}")
+print("Cüt ədədlər yeni fayla yazıldı və cəm hesablandı.")
