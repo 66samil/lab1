@@ -1,0 +1,15 @@
+def baş_diaqonal_yuxarı_müsbət_cəm(A, n):
+    cəm = 0
+     for i in range(n):
+        for j in range(i+1, n):  # i < j olmalıdır, yəni baş diaqonaldan yuxarıda
+            if A[i][j] > 0:  # Müsbət elementləri tapırıq
+                cəm += A[i][j]
+    return cəm
+A = [
+    [1, 2, 3],
+    [0, 4, 5],
+    [0, 0, 6]
+]
+n = 3
+nəticə = baş_diaqonal_yuxarı_müsbət_cəm(A, n)
+print("Baş diaqonalın yuxarısındakı müsbət elementlərin cəmi:", nəticə)
